@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sélénia Nocturne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header class="topbar shell">
+    <div class="brand-wrap">
+      <div class="brand-mark">🌙</div>
+      <div class="brand-text">Sélénia</div>
+    </div>
+
+    <nav class="topnav">
+      <a href="#/">Accueil</a>
+      <a href="#/onboarding">Onboarding</a>
+      <a href="#/dashboard">Dashboard</a>
+      <a href="#/chat">Chat</a>
+    </nav>
+  </header>
+
+  <main id="app" class="page shell"></main>
+
+  <template id="home-template">
+    <section class="home-screen">
+      <section class="hero-moon card">
+        <div class="hero-top">
+          <div class="hero-date">Mercredi 8 avril 2026</div>
+          <div class="hero-time">09:00</div>
+        </div>
+
+        <div class="hero-grid">
+          <div class="moon-visual">
+            <div class="moon-ring"></div>
+            <div class="moon-core"></div>
+          </div>
+
+          <div class="hero-copy">
+            <h1>Lune Croissante 🌙</h1>
+            <div class="hero-sub">⭐ Mercure en Bélier</div>
+            <p>La communication est affûtée comme une lame dorée.</p>
+
+            <div class="mini-cards">
+              <article class="mini-card">
+                <div class="mini-label">Jour Personnel</div>
+                <div class="mini-big">5</div>
+                <div class="mini-note">Changement & Liberté</div>
+              </article>
+
+              <article class="mini-card">
+                <div class="mini-label">Énergie dominante</div>
+                <div class="mini-big">Bélier</div>
+                <div class="mini-note">Action & Initiative</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="xp-card card">
+        <div class="xp-badges">
+          <div class="pill-box">
+            <span class="pill-emoji">🔥</span>
+            <div>
+              <strong>14</strong>
+              <small>Jours</small>
+            </div>
+          </div>
+
+          <div class="pill-box">
+            <span class="pill-emoji">🃏</span>
+            <div>
+              <strong>28</strong>
+              <small>Cartes</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="xp-main">
+          <div class="xp-title">Niv. 7 — Âme Éveillée</div>
+          <div class="xp-line"><span></span></div>
+          <div class="xp-note">260 XP pour Gardienne des Étoiles</div>
+        </div>
+
+        <div class="xp-compass">✦</div>
+      </section>
+
+      <section class="duo-grid">
+        <article class="feature-card card">
+          <div class="section-kicker">L’Écho des Étoiles</div>
+          <div class="section-sub">Carte du jour</div>
+
+          <div class="echo-grid">
+            <div class="tarot-card-visual">
+              <div class="tarot-title">XVIII</div>
+              <div class="tarot-moon">🌙</div>
+              <div class="tarot-footer">La Lune</div>
+            </div>
+
+            <div class="echo-copy">
+              <h3>La Lune</h3>
+              <div class="chip">Intuition & Mystère</div>
+              <p>Les eaux profondes de votre inconscient vous parlent ce matin. Faites confiance à vos rêves.</p>
+              <small class="soft-line">⟲ La Lune est revenue pour la 3e fois ce mois</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature-card card">
+          <div class="section-kicker">Sélénia : Analyse du moment</div>
+          <div class="chip-row">
+            <span class="chip">Introspection Lunaire</span>
+            <span class="chip">Lune en Cancer</span>
+          </div>
+
+          <p class="analysis-text">Votre sensibilité est amplifiée. Les émotions remontent comme une marée douce — accueillez-les sans brusquer le rythme.</p>
+
+          <div class="tag-grid">
+            <span class="tag">Résilience</span>
+            <span class="tag">Transformation</span>
+            <span class="tag">Intuition</span>
+            <span class="tag">Profondeur</span>
+          </div>
+
+          <div class="prescription">
+            <div class="prescription-title">💎 Prescription de bien-être</div>
+            <button class="list-row" type="button">🧘 Méditation sur le cœur — 10 min <span>›</span></button>
+            <button class="list-row" type="button">✨ Rituel de gratitude — 5 min <span>›</span></button>
+            <button class="list-row" type="button">🌬️ Respiration consciente — 5 min <span>›</span></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="triangle card">
+        <div class="section-kicker">Le Triangle d’Or</div>
+        <div class="section-sub">Synergie cosmique</div>
+
+        <div class="triangle-grid">
+          <a class="triangle-box" href="#/chat">
+            <div class="triangle-icon">🔮</div>
+            <div>
+              <strong>Tarot</strong>
+              <small>Tirage du moment</small>
+            </div>
+          </a>
+
+          <a class="triangle-box" href="#/dashboard">
+            <div class="triangle-icon">⭐</div>
+            <div>
+              <strong>Astrologie</strong>
+              <small>Transits & Thème</small>
+            </div>
+          </a>
+
+          <a class="triangle-box" href="#/dashboard">
+            <div class="triangle-icon">⅓</div>
+            <div>
+              <strong>Numérologie</strong>
+              <small>Chiffre de Soie</small>
+            </div>
+          </a>
+        </div>
+
+        <div class="triangle-banner">
+          Mars en Bélier · La Lune XVIII · Jour Personnel 5 — une convergence rare vous invite à l’action audacieuse.
+        </div>
+      </section>
+
+      <nav class="bottom-nav card">
+        <a class="bottom-link active" href="#/">🌙 <span>Accueil</span></a>
+        <a class="bottom-link" href="#/dashboard">◌ <span>Explorer</span></a>
+        <a class="bottom-link" href="#/chat">◔ <span>Moi</span></a>
+      </nav>
+    </section>
+  </template>
+
+  <template id="onboarding-template">
+    <section class="card classic-card">
+      <h2>Profil Spirituel</h2>
+      <form id="onboardingForm" class="form-grid">
+        <label>Prénom<input required name="name" placeholder="Ex: Ariane" /></label>
+        <label>Date de naissance<input required name="birthDate" type="date" /></label>
+        <label>Heure de naissance<input name="birthTime" type="time" /></label>
+        <label>Lieu de naissance<input required name="birthPlace" placeholder="Montréal, QC" /></label>
+        <label>Objectif actuel<textarea name="intent" rows="3" placeholder="Ce que tu veux clarifier..."></textarea></label>
+        <label class="check"><input type="checkbox" name="consent" required />J'accepte la charte éthique et le traitement local des données.</label>
+        <button class="btn primary" type="submit">Sauvegarder</button>
+      </form>
+      <p id="onboardingMsg" class="muted"></p>
+    </section>
+  </template>
+
+  <template id="dashboard-template">
+    <section class="dashboard-layout">
+      <aside class="card classic-card sidebar">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#/chat">Chat avec Sélénia</a></li>
+          <li><button id="refreshGuidance" class="link-btn">Actualiser guidance</button></li>
+        </ul>
+      </aside>
+      <div class="stack">
+        <article class="card classic-card">
+          <h3>Oracle du Jour</h3>
+          <p id="dailyOracle">Chargement...</p>
+        </article>
+        <article class="card classic-card">
+          <h3>Transit Astrologique</h3>
+          <p id="astroTransit">Chargement...</p>
+        </article>
+        <article class="card classic-card">
+          <h3>Numérologie</h3>
+          <p id="numerology">Chargement...</p>
+        </article>
+      </div>
+    </section>
+  </template>
+
+  <template id="chat-template">
+    <section class="card classic-card chat-card">
+      <h2>Chat Privé avec Sélénia</h2>
+      <div id="chatWindow" class="chat-window" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" required placeholder="Pose ta question nocturne..." />
+        <button class="btn primary" type="submit">Envoyer</button>
+      </form>
+      <div class="chat-tools">
+        <button id="speakLast" class="btn" type="button">Lire la dernière réponse 🔊</button>
+        <small id="memoryContext" class="muted">Contexte mémoire: 0 messages.</small>
+        <small id="apiState" class="muted"></small>
+      </div>
+    </section>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
