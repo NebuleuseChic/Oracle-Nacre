@@ -1,112 +1,13 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sélénia Nocturne</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-QOBbNEeL.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CpbkQopV.css">
-</head>
-<body>
-  <div class="bg-glow"></div>
-  <header class="topbar glass">
-    <div class="brand">🌙 Sélénia Nocturne</div>
-    <nav>
-      <a href="#/">Accueil</a>
-      <a href="#/onboarding">Onboarding</a>
-      <a href="#/dashboard">Dashboard</a>
-      <a href="#/chat">Chat</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sélénia Nocturne</title>
+  </head>
 
-  <main id="app" class="page"></main>
-
-  <template id="home-template">
-    <section class="hero card glass">
-      <h1>La Voyante Nocturne</h1>
-      <p class="lead">« L'univers t'a pas attendue pour tourner, mais là t'as notre attention. »</p>
-      <div class="cta-row">
-        <a class="btn primary" href="#/onboarding">Commencer</a>
-        <a class="btn" href="#/dashboard">Voir ma guidance</a>
-      </div>
-    </section>
-
-    <section class="universe card glass">
-      <h2>Univers Interactif</h2>
-      <div class="orbits" aria-hidden="true">
-        <span class="planet p1"></span><span class="planet p2"></span><span class="planet p3"></span>
-      </div>
-      <p>Oracle • Astrologie • Numérologie, en synergie.</p>
-    </section>
-
-    <section class="features-grid">
-      <article class="card glass"><h3>Écho des Étoiles</h3><p>Carte quotidienne + transit lunaire.</p></article>
-      <article class="card glass"><h3>Chiffre de Soie</h3><p>Analyse numérologique instantanée.</p></article>
-      <article class="card glass"><h3>Chat Privé</h3><p>Conversation intime avec mémoire contextuelle.</p></article>
-      <article class="card glass"><h3>Éthique d'abord</h3><p>Transparence, consentement et libre arbitre.</p></article>
-    </section>
-  </template>
-
-  <template id="onboarding-template">
-    <section class="card glass">
-      <h2>Profil Spirituel</h2>
-      <form id="onboardingForm" class="form-grid">
-        <label>Prénom<input required name="name" placeholder="Ex: Ariane" /></label>
-        <label>Date de naissance<input required name="birthDate" type="date" /></label>
-        <label>Heure de naissance<input name="birthTime" type="time" /></label>
-        <label>Lieu de naissance<input required name="birthPlace" placeholder="Montréal, QC" /></label>
-        <label>Objectif actuel<textarea name="intent" rows="3" placeholder="Ce que tu veux clarifier..."></textarea></label>
-        <label class="check"><input type="checkbox" name="consent" required />J'accepte la charte éthique et le traitement local des données.</label>
-        <button class="btn primary" type="submit">Sauvegarder</button>
-      </form>
-      <p id="onboardingMsg" class="muted"></p>
-    </section>
-  </template>
-
-  <template id="dashboard-template">
-    <section class="dashboard-layout">
-      <aside class="card glass sidebar">
-        <h3>Navigation</h3>
-        <ul>
-          <li><a href="#/chat">Chat avec Sélénia</a></li>
-          <li><button id="refreshGuidance" class="link-btn">Actualiser guidance</button></li>
-        </ul>
-      </aside>
-      <div class="stack">
-        <article class="card glass">
-          <h3>Oracle du Jour</h3>
-          <p id="dailyOracle">Chargement...</p>
-        </article>
-        <article class="card glass">
-          <h3>Transit Astrologique</h3>
-          <p id="astroTransit">Chargement...</p>
-        </article>
-        <article class="card glass">
-          <h3>Numérologie</h3>
-          <p id="numerology">Chargement...</p>
-        </article>
-      </div>
-    </section>
-  </template>
-
-  <template id="chat-template">
-    <section class="card glass chat-card">
-      <h2>Chat Privé avec Sélénia</h2>
-      <div id="chatWindow" class="chat-window" aria-live="polite"></div>
-      <form id="chatForm" class="chat-form">
-        <input id="chatInput" required placeholder="Pose ta question nocturne..." />
-        <button class="btn primary" type="submit">Envoyer</button>
-      </form>
-      <div class="chat-tools">
-        <button id="speakLast" class="btn">Lire la dernière réponse 🔊</button>
-        <small id="memoryContext" class="muted">Contexte mémoire: 0 messages.</small>
-        <small id="apiState" class="muted"></small>
-      </div>
-    </section>
-  </template>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
